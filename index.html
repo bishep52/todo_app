@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__title">Todo App</h1>
+      <p class="header__counter" data-todo-counter></p>
+    </header>
+    <main class="main">
+      <section class="todo">
+        <div class="todo__controls">
+          <input
+            class="todo__task"
+            type="text"
+            placeholder="Type your todo"
+            data-todo-field
+          />
+          <button class="todo__add-button" data-todo-add-button>
+            Add todo
+          </button>
+        </div>
+        <input
+          type="text"
+          class="todo__search"
+          placeholder="Type for search"
+          data-search-todo-input
+        />
+
+        <ul class="todo__list" data-todo-list></ul>
+      </section>
+    </main>
+
+    <template data-todo-template>
+      <li class="todo__item">
+        <input type="checkbox" class="todo__checkbox" data-todo-checkbox />
+        <div class="todo__info">
+          <p class="todo__description" data-todo-text></p>
+          <span class="todo__date" data-todo-date>03-10-24</span>
+        </div>
+        <button class="todo__remove-button" data-remove-todo-btn>❌</button>
+      </li>
+    </template>
+
+    <script type="module" src="app.js"></script>
+    <script type="module" src="utils.js"></script>
+  </body>
+</html>
